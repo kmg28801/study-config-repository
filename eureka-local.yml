@@ -1,12 +1,12 @@
 server:
-  port: 15000
+  port: 15010
 
 #Eureka Standalone Server
 eureka:
   server:
   client:
-    registerWithEureka: true
-    fetchRegistry: true
+    registerWithEureka: false
+    fetchRegistry: false
 
   instance:
     #각 서버별 접근을 IP로 하겠다는 의미
