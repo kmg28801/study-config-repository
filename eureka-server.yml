@@ -1,0 +1,15 @@
+server:
+  port: 20000
+
+#Eureka Standalone Server
+eureka:
+  server:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://localhost:${server.port}/eureka/
+  instance:
+    #각 서버별 접근을 IP로 하겠다는 의미
+    prefer-ip-address: true
+

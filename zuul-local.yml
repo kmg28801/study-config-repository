@@ -1,0 +1,33 @@
+server:
+  port: 15001
+
+
+#Eureka Client
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: localhost:15000/eureka/
+
+#Zuul Routing
+zuul:
+  #sslHostnameValidationEnabled: false
+
+  #ignoredServices: '*'
+  #sensitive-headers:
+  ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
+
+  host:
+    connect-timeout-millis: 3000
+    socket-timeout-millis: 3000
+
+  routes:
+  ############# spc - skc
+    customer:
+      path: /customer/**
+      serviceId: custome
+      stripPrefix: false
+
+    order:
+      path: /order/**
+      serviceId: order
+      stripPrefix: false
