@@ -5,10 +5,9 @@ server:
 eureka:
   server:
   client:
-    registerWithEureka: false
-    fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://localhost:${server.port}/eureka/
+    registerWithEureka: true
+    fetchRegistry: true
+
   instance:
     #각 서버별 접근을 IP로 하겠다는 의미
     prefer-ip-address: true
