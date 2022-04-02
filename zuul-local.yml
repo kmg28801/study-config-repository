@@ -6,7 +6,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: localhost:15000/eureka/
+      defaultZone: http://localhost:15000/eureka/
 
 #Zuul Routing
 zuul:
